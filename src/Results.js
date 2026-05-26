@@ -68,6 +68,7 @@ export default function Results({ results, onBack }) {
       }
     };
     fetchSummary();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleLeadSubmit = async () => {
