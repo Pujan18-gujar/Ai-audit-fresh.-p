@@ -48,7 +48,7 @@ export default function Results({ results, onBack }) {
   useEffect(() => {
     const fetchSummary = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/summary", {
+        const res = await fetch("https://ai-audit-fresh-p.onrender.com/api/summary", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -73,7 +73,7 @@ export default function Results({ results, onBack }) {
 
   const handleLeadSubmit = async () => {
     try {
-      await fetch("http://localhost:5000/api/leads", {
+      await fetch("https://ai-audit-fresh-p.onrender.com/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, company, totalSavings, auditData: results }),
